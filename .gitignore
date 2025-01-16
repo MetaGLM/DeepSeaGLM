@@ -9,3 +9,6 @@ test*
 *.docx
 check
 *venv
+*.jsonl
+*.csv
+*.xlsx
