@@ -14,7 +14,7 @@ else:
     print("需要预处理数据，请删除文件夹后重新运行。")
 
 
-def create_chat_completion(messages, model="glm-4-plus-0111"):
+def create_chat_completion(messages, model="glm-4-plus"):
     client = ZhipuAI()
     response = client.chat.completions.create(
         model=model, stream=False, messages=messages
@@ -42,7 +42,7 @@ def choose_table(question):
 # In[5]:
 
 
-def glm4_create(max_attempts, messages, tools, model="glm-4-plus-0111"):
+def glm4_create(max_attempts, messages, tools, model="glm-4-plus"):
     client = ZhipuAI()
     for attempt in range(max_attempts):
         response = client.chat.completions.create(
