@@ -8,6 +8,7 @@ folders = ["database_in_use", "data"]
 if any(not os.path.exists(folder) for folder in folders):
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
+    import data_process # for data process using
 else:
     print("所有文件夹均已存在。不再重新预处理数据。")
     print("需要预处理数据，请删除文件夹后重新运行。")
